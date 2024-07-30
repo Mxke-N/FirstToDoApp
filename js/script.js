@@ -10,7 +10,9 @@ const addTask = () => {
         return;
     } else {
         let new_li = document.createElement("li");
-        new_li.innerHTML = inputBox.value;
+        let text = document.createElement("p");
+        text.innerHTML = inputBox.value;
+        new_li.appendChild(text);
         listContainer.appendChild(new_li);
 
         let span = document.createElement("span");
@@ -36,7 +38,10 @@ const showTasks = () => {
 showTasks();
 
 listContainer.addEventListener("click", function(e) {
-    if (e.target.tagName === "LI") {
+    if (e.target.tagName === "P") {
+        e.target.parentElement.classList.toggle("checked");
+        saveData();
+    } else if (e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
     } else if (e.target.tagName === "SPAN") {
