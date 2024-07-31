@@ -65,6 +65,14 @@ button {
     border-radius: 40px;
 }
 
+button:hover {
+    background: #ffbc65;
+}
+
+button:active {
+    background: #e69a35;
+}
+
 ul li {
     list-style: none;
     font-size: 17px;
@@ -109,7 +117,7 @@ ul li p {
 ul li span {
     position: absolute;
     right: 3px;
-    top: 1.5px;
+    top: 1.6px;
     width: 40px;
     height: 40px;
     font-size: 22px;
@@ -124,6 +132,14 @@ ul li span:hover {
     color: white;
 }
 
+ul li span:active {
+    background: #c33e30;
+}
+
 ul li:hover {
     border: 2px solid #a5bef1;
+}
+
+ul li:active {
+    border-color: #b0caff;
 }
